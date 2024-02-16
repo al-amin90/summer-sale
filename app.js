@@ -15,8 +15,13 @@ for (const card of cards) {
         listCount++;
 
         totalPrice += price;
-
         document.getElementById("total-price").innerText = totalPrice.toFixed(2);
+
+        if (totalPrice > 0) {
+            document.getElementById("purchase-btn").removeAttribute("disabled");
+            console.log(totalPrice)
+        }
+
     })
 }
 
@@ -26,7 +31,7 @@ applyBtn.addEventListener("click", function () {
     const couponCode = inputFiled.split(" ").join().toUpperCase();
 
     if (totalPrice > 200) {
-        if (inputFiled === "SELL200") {
+        if (couponCode === "SELL200") {
             const discountElement = document.getElementById("discount-price");  
             
             const discountAmount = totalPrice * 0.2;
@@ -48,3 +53,4 @@ applyBtn.addEventListener("click", function () {
         document.getElementById("input-filed").value = "";
     }
 })
+
