@@ -21,11 +21,11 @@
 </head>
 <body class="font-work-sans">
     <header class="bg-[#F9F6E2]">
-        <div class="banner w-9/12 max-w-[1440px] gap-7 flex flex-col md:flex-row mx-auto py-16">
+        <div class="banner w-9/12 max-w-[1440px] gap-7 flex flex-col-reverse md:flex-row mx-auto py-16">
             <div class="flex-1 flex items-center justify-center text-center">
                 <div>
                     <h3 class="font-medium text-xl">---SALE FEVER---</h3>
-                    <h1 class="font-bold text-4xl text-black my-8">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
+                    <h1 class="font-bold text-4xl text-black my-8">Purchase TK 200 or  above & get <span class="text-[#E527B2]">20% off</span></h1>
                     <div class="flex justify-center items-center gap-1">
                         <h5 class="font-medium text-black">Use Promo Code</h5>
                         <button class="py-2 px-3 rounded-md font-semibold bg-[#E527B2] text-white ">SELL200</button>
@@ -225,12 +225,26 @@
                         </ul>
                         <hr class=" border-[#11111180] my-3">
                         <div class="text-black text-base font-medium">
-                            <p>Total price: <span id="total-price" class="text-[#11111180]">0</span>TK</p>
-                            <p>Discount : <span id="discount-price" class="text-[#11111180]">0 </span>TK</p>
-                            <p>Total: <span id="total" class="text-[#11111180]">0</span>TK</p>
+                            <p>Total price: <span id="total-price" class="text-[#11111180]">0</span> TK</p>
+                            <p>Discount : <span id="discount-price" class="text-[#11111180]">0 </span> TK</p>
+                            <p>Total: <span id="total" class="text-[#11111180]">0</span> TK</p>
                         </div>
                         <hr class=" border-[#11111180] my-4">
-                        <button class="btn w-full font-semibold bg-[#E527B2] text-white ">Make Purchase</button>
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn w-full font-semibold bg-[#E527B2] text-white " onclick="my_modal_1.showModal()">Make Purchase</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box flex flex-col items-center justify-center py-16">
+                                <img src="./images/congo.png" alt="">
+                                <h3 class="font-bold text-[#111111] text-4xl md:text-5xl mt-3">Congratulations</h3>
+                                <p class="py-3">Your Purchase the product</p>
+                                <div class="">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn font-semibold bg-[#E527B2] text-white">Go Home</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>

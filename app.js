@@ -40,9 +40,11 @@ applyBtn.addEventListener("click", function () {
         }
         else {
             alert("invalid Coupon")
+            document.getElementById("input-filed").value = "";
         }
     }
     else {
-        alert("please at least $200 khoroch koren")
+        alert("please at least $200 khoroch koren");
+        document.getElementById("input-filed").value = "";
     }
 })
